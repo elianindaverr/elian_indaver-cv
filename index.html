@@ -49,17 +49,18 @@
         .sidebar .section {
             margin-bottom: 35px;
         }
-        /* Círculo vacío con fondo blanco */
-        .circulo-vacio {
+        /* Contenedor del cuadrado (sin foto) */
+        .foto-perfil {
             text-align: center;
             margin-bottom: 30px;
         }
-        .circulo-vacio div {
+        /* Cuadrado vacío con bordes suaves */
+        .cuadrado-vacio {
             width: 150px;
             height: 150px;
-            border-radius: 50%;
+            border-radius: 5px; /* Cambiá a 0 para bordes rectos */
             border: 4px solid #5fc1b0;
-            background-color: #ffffff;  /* Fondo blanco */
+            background-color: #ffffff;
             margin: 0 auto;
         }
         /* Contacto */
@@ -278,18 +279,18 @@
 <div class="cv-container">
     <!-- COLUMNA IZQUIERDA -->
     <div class="sidebar">
-        <!-- Círculo vacío con fondo blanco -->
-        <div class="circulo-vacio">
-            <div></div>
+        <!-- Cuadrado vacío (sin foto) -->
+        <div class="foto-perfil">
+            <div class="cuadrado-vacio"></div>
         </div>
 
-        <!-- Contacto -->
+        <!-- Contacto (actualizado según PDF) -->
         <div class="section contact-info">
             <h2>Contacto</h2>
             <p><i>📍</i> Centenario, Neuquén</p>
-            <p><i>📞</i> 299 5308415</p>
-            <p><i>✉️</i> elianindaverr@gmail.com</p>
-            <p><i>🔗</i> linkedin.com/in/elian-indaver</p>
+            <p><i>📞</i> 2995308415</p>
+            <p><i>✉️</i> elianindaver@gmail.com</p>
+            <p><i>🔗</i> linkedin.com/in/elain-indaver</p>
         </div>
 
         <!-- Habilidades técnicas -->
@@ -331,7 +332,7 @@
             <h2>Formación complementaria</h2>
             <ul style="list-style: none; padding-left: 0;">
                 <li class="course-item">📘 Excel Intermedio – Santander (certificado)</li>
-                <li class="course-item">📘 Auxiliar Contable (certificado)</li>
+                <li class="course-item">📘 Auxiliar Contable (certicado)</li>
                 <li class="course-item">📘 Liderazgo y Trabajo en Equipo</li>
                 <li class="course-item">📘 SEO y Content Marketing</li>
                 <li class="course-item">📘 Certificado en Manipulación de Alimentos</li>
@@ -343,7 +344,7 @@
     <div class="main-content">
         <div class="header">
             <h1>ELIAN INDAVER</h1>
-            <div class="subtitle">Estudiante de Licenciatura en Economía.</div>
+            <div class="subtitle">Estudiante de Economía | Administración & Finanzas</div>
         </div>
 
         <!-- Perfil Profesional -->
@@ -367,7 +368,7 @@
             </ul>
         </div>
 
-        <!-- Educación -->
+        <!-- Educación (año 2028) -->
         <h2>Educación</h2>
         <div class="education-item">
             <div class="edu-header">
@@ -394,9 +395,8 @@
         <!-- Dato destacado -->
         <div class="highlight-box">
             <p>📌 Dato destacado</p>
-            <p>Durante mi experiencia en Farmacia Indaver, mantuve un control de caja sin diferencias durante todo el período y propuse mejoras en el registro de comprobantes que redujeron el tiempo de archivo.</p>
+            <p>Durante mi experiencia en Farmacia Indaver, mantuve un control de caja sin diferencias durante todo el período y propuse mejoras en el registro de comprobantes que redujeron el tiempo.</p>
         </div>
-
         </div>
     </div>
 </div>

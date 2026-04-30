@@ -15,259 +15,133 @@
             background-color: #f4f7fb;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
             padding: 30px 20px;
         }
         .cv-container {
             max-width: 1100px;
             width: 100%;
             background-color: #ffffff;
-            border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
             display: flex;
             flex-wrap: wrap;
+            overflow: hidden;
         }
-        /* Columna izquierda (oscura) */
         .sidebar {
             background-color: #1e2b37;
             color: #e0e0e0;
             flex: 1 1 300px;
-            padding: 40px 25px;
+            padding: 35px 25px;
         }
         .sidebar h2 {
-            color: #ffffff;
-            font-size: 1.4rem;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
             border-bottom: 2px solid #3f5b6e;
-            padding-bottom: 8px;
+            padding-bottom: 6px;
             text-transform: uppercase;
-            font-weight: 500;
         }
-        .sidebar .section {
-            margin-bottom: 35px;
+        .section {
+            margin-bottom: 30px;
         }
-        /* Contenedor del rectángulo vacío */
+
         .foto-perfil {
             text-align: center;
             margin-bottom: 30px;
         }
-        /* Rectángulo vacío con dimensiones exactas de la foto */
         .rectangulo-vacio {
             width: 95px;
             height: 142px;
-            border-radius: 5px; /* Cambiá a 0 para bordes rectos */
+            border-radius: 5px;
             border: 4px solid #5fc1b0;
             background-color: #ffffff;
             margin: 0 auto;
         }
-        /* Contacto */
+
         .contact-info p {
             margin: 8px 0;
             display: flex;
-            align-items: center;
             gap: 10px;
             font-size: 0.95rem;
         }
-        .contact-info i {
-            width: 24px;
-            font-style: normal;
-            color: #9ab3c7;
-        }
-        /* Barras de habilidades */
-        .skill-item {
-            margin-bottom: 15px;
-        }
-        .skill-name {
-            font-weight: 500;
-            color: #fff;
-            margin-bottom: 4px;
-        }
-        .skill-bar {
-            background-color: #3f5b6e;
-            height: 8px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .skill-level {
-            background-color: #5fc1b0;
-            height: 8px;
-            border-radius: 10px;
-        }
-        .level-60 { width: 60%; }
-        .level-70 { width: 70%; }
-        .level-75 { width: 75%; }
-        .level-80 { width: 80%; }
-        .level-90 { width: 90%; }
-        /* Idiomas */
-        .lang-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 12px;
-        }
-        .lang-name {
-            font-weight: 500;
-            color: #fff;
-        }
-        .lang-level {
-            color: #9ab3c7;
-        }
-        /* Lista de cursos */
-        .course-item {
-            font-size: 0.95rem;
-            list-style-type: disc;
-            margin-left: 20px;
-            color: #d0dde9;
+
+        .skills-list li {
             margin-bottom: 8px;
+            font-size: 0.95rem;
         }
-        /* Columna derecha (blanca) */
+
         .main-content {
-            background-color: #ffffff;
             flex: 3 1 600px;
-            padding: 40px 35px;
-        }
-        .header {
-            margin-bottom: 30px;
+            padding: 40px;
         }
         .header h1 {
-            font-size: 3rem;
-            font-weight: 600;
+            font-size: 2.8rem;
             color: #1e2b37;
-            letter-spacing: 1px;
-            line-height: 1.2;
         }
-        .header .subtitle {
-            font-size: 1.2rem;
+        .subtitle {
             color: #3f5b6e;
             margin-top: 5px;
-            font-weight: 400;
         }
-        .main-content h2 {
+        h2 {
             color: #1e2b37;
-            font-size: 1.5rem;
-            margin: 25px 0 15px 0;
-            border-left: 6px solid #5fc1b0;
-            padding-left: 15px;
-            font-weight: 600;
+            margin: 25px 0 10px;
+            border-left: 5px solid #5fc1b0;
+            padding-left: 10px;
         }
-        .main-content h2:first-of-type {
-            margin-top: 0;
+        p {
+            color: #2e3b4e;
+            line-height: 1.6;
         }
+
         .job {
-            margin-bottom: 22px;
+            margin-bottom: 20px;
         }
         .job-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
             flex-wrap: wrap;
-            margin-bottom: 6px;
         }
         .job-title {
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: #1e2b37;
-        }
-        .job-company {
-            font-weight: 500;
-            color: #3f5b6e;
-        }
-        .job-date {
-            color: #6f8a9c;
-            font-size: 0.9rem;
-            background: #f0f4fa;
-            padding: 3px 10px;
-            border-radius: 30px;
-        }
-        .job-description {
-            list-style: none;
-            padding-left: 0;
-        }
-        .job-description li {
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-            color: #2e3b4e;
-        }
-        .job-description li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: #5fc1b0;
             font-weight: bold;
         }
-        .education-item {
-            margin-bottom: 22px;
+        .job-date {
+            font-size: 0.85rem;
+            color: #6f8a9c;
         }
-        .edu-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
+        .job-company {
+            color: #3f5b6e;
+            margin-bottom: 5px;
+        }
+        .job-description {
+            padding-left: 15px;
+        }
+        .job-description li {
             margin-bottom: 6px;
         }
-        .edu-title {
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: #1e2b37;
+
+        .education-item {
+            margin-bottom: 15px;
         }
-        .edu-institution {
-            font-weight: 500;
-            color: #3f5b6e;
-        }
-        .edu-date {
-            color: #6f8a9c;
-            font-size: 0.9rem;
-            background: #f0f4fa;
-            padding: 3px 10px;
-            border-radius: 30px;
-        }
-        /* Competencias como etiquetas */
+
         .competences {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 15px;
+            gap: 10px;
         }
         .competence-tag {
             background-color: #eaf1f9;
-            color: #1e2b37;
-            padding: 6px 16px;
-            border-radius: 40px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border: 1px solid #cbd6e3;
-        }
-        hr {
-            border: none;
-            border-top: 2px dashed #d0dde9;
-            margin: 25px 0 10px;
-        }
-        .highlight-box {
-            margin-top: 30px;
-            background-color: #f4f9ff;
-            padding: 18px;
+            padding: 6px 14px;
             border-radius: 20px;
+            font-size: 0.9rem;
         }
-        .highlight-box p:first-child {
-            font-weight: 600;
-            color: #1e2b37;
-            margin-bottom: 8px;
+
+        .highlight-box {
+            margin-top: 25px;
+            background-color: #f4f9ff;
+            padding: 15px;
+            border-radius: 15px;
         }
-        .highlight-box p:last-child {
-            color: #2e4a6b;
-        }
-        .footer-note {
-            font-size: 0.85rem;
-            color: #8a9eb0;
-            text-align: right;
-            margin-top: 30px;
-            border-top: 1px solid #e0e8f0;
-            padding-top: 15px;
-        }
-        /* Responsive */
+
         @media (max-width: 800px) {
             .cv-container {
                 flex-direction: column;
@@ -276,82 +150,66 @@
     </style>
 </head>
 <body>
+
 <div class="cv-container">
-    <!-- COLUMNA IZQUIERDA -->
+
+    <!-- SIDEBAR -->
     <div class="sidebar">
-        <!-- Rectángulo vacío con dimensiones de la foto -->
+
         <div class="foto-perfil">
             <div class="rectangulo-vacio"></div>
         </div>
 
-        <!-- Contacto (actualizado según PDF) -->
         <div class="section contact-info">
             <h2>Contacto</h2>
-            <p><i>📍</i> Centenario, Neuquén</p>
-            <p><i>📞</i> 2995308415</p>
-            <p><i>✉️</i> elianindaver@gmail.com</p>
-            <p><i>🔗</i> linkedin.com/in/elian-indaver</p>
+            <p>📍 Centenario, Neuquén</p>
+            <p>📞 2995308415</p>
+            <p>✉️ elianindaver@gmail.com</p>
+            <p>🔗 linkedin.com/in/elian-indaver</p>
         </div>
 
-        <!-- Habilidades técnicas -->
         <div class="section">
-            <h2>Habilidades técnicas</h2>
-            <div class="skill-item">
-                <div class="skill-name">Excel intermedio</div>
-                <div class="skill-bar"><div class="skill-level level-80"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name">Registración contable</div>
-                <div class="skill-bar"><div class="skill-level level-75"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name">Conciliaciones</div>
-                <div class="skill-bar"><div class="skill-level level-80"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name">Control de caja</div>
-                <div class="skill-bar"><div class="skill-level level-90"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name">Gestión documental</div>
-                <div class="skill-bar"><div class="skill-level level-70"></div></div>
-            </div>
-        </div>
-
-        <!-- Idiomas -->
-        <div class="section">
-            <h2>Idiomas</h2>
-            <div class="lang-item">
-                <span class="lang-name">Inglés</span>
-                <span class="lang-level">B2 (Intermedio)</span>
-            </div>
-        </div>
-
-        <!-- Formación complementaria -->
-        <div class="section">
-            <h2>Formación complementaria</h2>
-            <ul style="list-style: none; padding-left: 0;">
-                <li class="course-item">📘 Excel Intermedio – Santander (certificado)</li>
-                <li class="course-item">📘 Auxiliar Contable (certificado)</li>
-                <li class="course-item">📘 Liderazgo y Trabajo en Equipo</li>
-                <li class="course-item">📘 SEO y Content Marketing</li>
-                <li class="course-item">📘 Certificado en Manipulación de Alimentos</li>
+            <h2>Habilidades</h2>
+            <ul class="skills-list">
+                <li>Excel intermedio</li>
+                <li>Manejo de caja</li>
+                <li>Facturación básica</li>
+                <li>Control de stock</li>
+                <li>Carga y gestión de datos administrativos</li>
             </ul>
         </div>
-    </div>
 
-    <!-- COLUMNA DERECHA -->
-    <div class="main-content">
-        <div class="header">
-            <h1>ELIAN INDAVER</h1>
-            <div class="subtitle">Estudiante de Licenciatura en Economía</div>
+        <div class="section">
+            <h2>Idiomas</h2>
+            <p>Inglés: B2 (Intermedio)</p>
         </div>
 
-        <!-- Perfil Profesional -->
-        <h2>Perfil Profesional</h2>
-        <p style="line-height: 1.6; color: #2e3b4e;">Estudiante de Licenciatura en Economía (2° año) con experiencia en gestión de caja, control administrativo y atención al cliente. Formación en registración contable y conciliaciones. Manejo intermedio de Excel y nivel de inglés B2. Organizado, analítico y orientado a la precisión en procesos financieros. Busco aplicar mis habilidades en un entorno desafiante que impulse mi crecimiento profesional.</p>
+        <div class="section">
+            <h2>Formación complementaria</h2>
+            <ul class="skills-list">
+                <li>Excel Intermedio – Santander</li>
+                <li>Auxiliar Contable</li>
+            </ul>
+        </div>
 
-        <!-- Experiencia Laboral -->
+    </div>
+
+    <!-- MAIN -->
+    <div class="main-content">
+
+        <div class="header">
+            <h1>ELIAN INDAVER</h1>
+            <div class="subtitle">Perfil Administrativo | Estudiante de Economía</div>
+        </div>
+
+        <h2>Perfil Profesional</h2>
+        <p>
+            Estudiante de Licenciatura en Economía (2° año) con experiencia en tareas administrativas y operativas. 
+            Manejo de Excel para control y organización de información. 
+            Experiencia en caja, facturación básica y gestión de datos administrativos. 
+            Busco desarrollarme en entornos administrativos y de gestión.
+        </p>
+
         <h2>Experiencia Laboral</h2>
         <div class="job">
             <div class="job-header">
@@ -360,45 +218,37 @@
             </div>
             <div class="job-company">Farmacia Indaver</div>
             <ul class="job-description">
-                <li>Gestión diaria de caja: manejo de ingresos y egresos, control de diferencias y arqueos.</li>
-                <li>Registro y archivo de comprobantes contables, asegurando la correcta documentación de operaciones.</li>
-                <li>Control y reposición de stock, optimizando la disponibilidad de productos.</li>
-                <li>Atención al cliente y gestión de cobros, resolviendo consultas y reclamos de manera efectiva.</li>
-                <li>Apoyo en tareas administrativas generales: conciliaciones bancarias y seguimiento de cuentas corrientes.</li>
+                <li>Registro de comprobantes y apoyo en facturación básica.</li>
+                <li>Control y reposición de stock.</li>
+                <li>Manejo de información y carga de datos administrativos.</li>
             </ul>
         </div>
 
-        <!-- Educación (año 2027) -->
         <h2>Educación</h2>
         <div class="education-item">
-            <div class="edu-header">
-                <span class="edu-title">Licenciatura en Economía</span>
-                <span class="edu-date">2023 - Actualidad</span>
+            <div class="job-header">
+                <span><strong>Licenciatura en Economía</strong></span>
+                <span class="job-date">2023 - Actualidad</span>
             </div>
-            <div class="edu-institution">Universidad UCASAL · 2° año en curso (finalización estimada 2028)</div>
+            <p>Universidad UCASAL · 2° año en curso</p>
         </div>
 
-        <hr>
-
-        <!-- Competencias -->
-        <h2 style="margin-top: 10px;">Competencias</h2>
+        <h2>Competencias</h2>
         <div class="competences">
             <span class="competence-tag">Organización</span>
             <span class="competence-tag">Atención al detalle</span>
             <span class="competence-tag">Responsabilidad</span>
             <span class="competence-tag">Trabajo en equipo</span>
-            <span class="competence-tag">Orientación al cliente</span>
             <span class="competence-tag">Capacidad analítica</span>
-            <span class="competence-tag">Resolución de problemas</span>
         </div>
 
-        <!-- Dato destacado -->
         <div class="highlight-box">
-            <p>📌 Dato destacado</p>
-            <p>Durante mi experiencia en Farmacia Indaver, mantuve un control de caja sin diferencias durante todo el período y propuse mejoras en el registro de comprobantes que redujeron el tiempo.</p>
+            <p><strong>Dato destacado:</strong></p>
+            <p>Mantuve control de caja sin diferencias durante todo el período y optimicé procesos administrativos.</p>
         </div>
-        </div>
+
     </div>
 </div>
+
 </body>
 </html>

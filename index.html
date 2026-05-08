@@ -61,14 +61,15 @@
             border: 4px solid #5fc1b0;
             box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
             background-color: white;
+            position: relative;
         }
 
         .foto-cv {
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
-            object-position: center top;
-            transform: scale(3.2) translateY(-2px);
+            position: absolute;
+            width: 520px;
+            height: auto;
+            left: -145px;
+            top: -20px;
         }
 
         .contact-info p {
@@ -200,16 +201,6 @@
 
             .header h1 {
                 font-size: 2.3rem;
-            }
-
-            .foto-perfil {
-                width: 190px;
-                height: 190px;
-            }
-
-            .foto-cv {
-                width: 190px;
-                height: 190px;
             }
         }
     </style>

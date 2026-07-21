@@ -1,409 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Elian Indaver</title>
-
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f4f7fb;
-            display: flex;
-            justify-content: center;
-            padding: 30px 20px;
-        }
-
-        .cv-container {
-            max-width: 1100px;
-            width: 100%;
-            background-color: #ffffff;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-            display: flex;
-            flex-wrap: wrap;
-            overflow: hidden;
-        }
-
-        .sidebar {
-            background-color: #1e2b37;
-            color: #f1f1f1;
-            flex: 1 1 300px;
-            padding: 45px 30px;
-        }
-
-        .sidebar h2 {
-            color: #ffffff;
-            font-size: 1.3rem;
-            margin-bottom: 18px;
-            border-bottom: 2px solid #3f5b6e;
-            padding-bottom: 8px;
-            text-transform: uppercase;
-        }
-
-        .section {
-            margin-bottom: 45px;
-        }
-
-        .foto-perfil {
-            width: 220px;
-            height: 220px;
-            overflow: hidden;
-            margin: 0 auto 50px auto;
-            border-radius: 14px;
-            border: 4px solid #5fc1b0;
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
-            background-color: white;
-            position: relative;
-        }
-
-        .foto-cv {
-            position: absolute;
-            width: 220px;
-            height: auto;
-            left: 0px;
-            top: -30px;
-        }
-
-        .contact-info p {
-            margin: 14px 0;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-        .contact-info a {
-            color: #f1f1f1;
-            text-decoration: none;
-        }
-
-        .skills-list {
-            padding-left: 20px;
-        }
-
-        .skills-list li {
-            margin-bottom: 14px;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-        .main-content {
-            flex: 3 1 600px;
-            padding: 45px;
-        }
-
-        .header h1 {
-            font-size: 3rem;
-            color: #1e2b37;
-            margin-bottom: 5px;
-        }
-
-        .subtitle {
-            color: #3f5b6e;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-
-        h2 {
-            color: #1e2b37;
-            margin: 35px 0 18px;
-            border-left: 5px solid #5fc1b0;
-            padding-left: 12px;
-            font-size: 1.8rem;
-        }
-
-        p {
-            color: #2e3b4e;
-            line-height: 1.8;
-        }
-
-        .sidebar p {
-            color: #f1f1f1;
-        }
-
-        .job {
-            margin-bottom: 30px;
-        }
-
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-bottom: 6px;
-        }
-
-        .job-title {
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .job-date {
-            font-size: 0.9rem;
-            color: #6f8a9c;
-        }
-
-        .job-company {
-            color: #3f5b6e;
-            margin-bottom: 12px;
-            font-weight: bold;
-        }
-
-        .job-description {
-            padding-left: 22px;
-        }
-
-        .job-description li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .education-item {
-            margin-bottom: 25px;
-        }
-
-        .competences {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 15px;
-        }
-
-        .competence-tag {
-            background-color: #eaf1f9;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #1e2b37;
-            font-weight: 500;
-        }
-
-        .highlight-box {
-            margin-top: 35px;
-            background-color: #f4f9ff;
-            padding: 20px;
-            border-radius: 15px;
-            border-left: 4px solid #5fc1b0;
-        }
-
-        .highlight-box p {
-            margin-bottom: 8px;
-            color: #1e2b37;
-        }
-
-        @media (max-width: 800px) {
-            .cv-container {
-                flex-direction: column;
-            }
-
-            .main-content {
-                padding: 30px;
-            }
-
-            .header h1 {
-                font-size: 2.3rem;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
+        body { background-color: #f4f7fb; display: flex; justify-content: center; padding: 30px 20px; }
+        .cv-container { max-width: 1100px; width: 100%; background-color: #ffffff; border-radius: 25px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08); display: flex; flex-wrap: wrap; overflow: hidden; }
+        .sidebar { background-color: #1e2b37; color: #f1f1f1; flex: 1 1 300px; padding: 45px 30px; }
+        .sidebar h2 { color: #ffffff; font-size: 1.3rem; margin-bottom: 18px; border-bottom: 2px solid #3f5b6e; padding-bottom: 8px; text-transform: uppercase; }
+        .section { margin-bottom: 45px; }
+        .foto-perfil { width: 220px; height: 220px; overflow: hidden; margin: 0 auto 50px auto; border-radius: 14px; border: 4px solid #5fc1b0; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); background-color: white; position: relative; }
+        .foto-cv { position: absolute; width: 220px; height: auto; left: 0px; top: -30px; }
+        .contact-info p { margin: 14px 0; font-size: 1rem; line-height: 1.5; }
+        .contact-info a { color: #f1f1f1; text-decoration: none; }
+        .skills-list { padding-left: 20px; }
+        .skills-list li { margin-bottom: 14px; font-size: 1rem; line-height: 1.5; }
+        .main-content { flex: 3 1 600px; padding: 45px; }
+        .header h1 { font-size: 3rem; color: #1e2b37; margin-bottom: 5px; }
+        .subtitle { color: #3f5b6e; margin-bottom: 30px; font-size: 1.1rem; }
+        h2 { color: #1e2b37; margin: 35px 0 18px; border-left: 5px solid #5fc1b0; padding-left: 12px; font-size: 1.8rem; }
+        p { color: #2e3b4e; line-height: 1.8; }
+        .sidebar p { color: #f1f1f1; }
+        .job { margin-bottom: 30px; }
+        .job-header { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 6px; }
+        .job-title { font-weight: bold; font-size: 1.1rem; }
+        .job-date { font-size: 0.9rem; color: #6f8a9c; }
+        .job-company { color: #3f5b6e; margin-bottom: 12px; font-weight: bold; }
+        .job-description { padding-left: 22px; }
+        .job-description li { margin-bottom: 10px; line-height: 1.6; }
+        .education-item { margin-bottom: 25px; }
+        .competences { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 15px; }
+        .competence-tag { background-color: #eaf1f9; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; color: #1e2b37; font-weight: 500; }
+        .highlight-box { margin-top: 35px; background-color: #f4f9ff; padding: 20px; border-radius: 15px; border-left: 4px solid #5fc1b0; }
+        .highlight-box p { margin-bottom: 8px; color: #1e2b37; }
+        @media (max-width: 800px) { .cv-container { flex-direction: column; } .main-content { padding: 30px; } .header h1 { font-size: 2.3rem; } }
     </style>
 </head>
-
 <body>
-
     <div class="cv-container">
-
         <!-- SIDEBAR -->
         <div class="sidebar">
-
             <div class="foto-perfil">
                 <img src="foto elian.png" alt="Foto de perfil" class="foto-cv">
             </div>
-
             <div class="section contact-info">
-
                 <h2>Contacto</h2>
-
                 <p>📍 Centenario, Neuquén</p>
-
                 <p>📞 2995308415</p>
-
                 <p>✉️ elianindaver@gmail.com</p>
-
-                <p>
-                    🔗
-                    <a href="https://linkedin.com/in/elian-indaver" target="_blank">
-                        linkedin.com/in/elian-indaver
-                    </a>
-                </p>
-
+                <p>🔗 <a href="https://linkedin.com/in/elian-indaver" target="_blank">linkedin.com/in/elian-indaver</a></p>
             </div>
-
             <div class="section">
-
-                <h2>Habilidades Core</h2>
-
+                <h2>Habilidades</h2>
                 <ul class="skills-list">
-                    <li>Gestión de valores y medios de pago</li>
-                    <li>Arqueo y cierre de caja</li>
-                    <li>Atención al cliente financiero</li>
-                    <li>Resolución de conflictos</li>
-                    <li>Excel Intermedio (Análisis de datos)</li>
-                    <li>Carga y gestión de datos administrativos</li>
-                    <li>Control de stock y auditoría básica</li>
+                    <li>Manejo de caja, posnet y efectivo</li>
+                    <li>Cierre y arqueo diario</li>
+                    <li>Atención al cliente y resolución de reclamos</li>
+                    <li>Excel nivel intermedio (fórmulas, tablas)</li>
+                    <li>Carga de datos y facturación básica</li>
+                    <li>Control de stock e inventario</li>
                 </ul>
-
             </div>
-
             <div class="section">
-
                 <h2>Idiomas</h2>
-
-                <p><strong>Inglés: B2 (Intermedio-Alto)</strong></p>
-
+                <p><strong>Inglés: B2 (Intermedio)</strong></p>
             </div>
-
             <div class="section">
-
                 <h2>Formación Complementaria</h2>
-
                 <ul class="skills-list">
                     <li>Excel Intermedio – Santander</li>
                     <li>Auxiliar Contable</li>
-                    <li>Herramientas digitales y administrativas</li>
-                    <li>IA Generativa aplicada</li>
+                    <li>Conocimientos básicos de diseño web (HTML/CSS)</li>
+                    <li>Uso de herramientas de IA Generativa</li>
                 </ul>
-
             </div>
-
         </div>
 
         <!-- MAIN CONTENT -->
         <div class="main-content">
-
             <div class="header">
-
                 <h1>ELIAN INDAVER</h1>
-
-                <div class="subtitle">
-                    Perfil Administrativo y Financiero | Estudiante de Economía
-                </div>
-
+                <div class="subtitle">Estudiante de Economía | Experiencia en Caja y Administración</div>
             </div>
 
             <h2>Perfil Profesional</h2>
-
             <p>
-                Estudiante de Licenciatura en Economía (2° año) con sólida experiencia en manejo de valores, atención al cliente y tareas administrativas operativas. Poseo un historial comprobado en la gestión de caja con altos volúmenes de transacciones, destacándome por mi precisión, responsabilidad y excelente trato al público. Busco aplicar mis conocimientos analíticos y mi experiencia operativa para desarrollarme profesionalmente dentro del sector bancario y financiero, aportando eficiencia, confiabilidad y orientación a resultados.
+                Soy estudiante de segundo año de la Licenciatura en Economía y actualmente trabajo como cajero en La Anónima. Tengo experiencia práctica en atención al cliente, manejo de altos volúmenes de dinero en efectivo y tareas administrativas diarias. Me considero una persona responsable, ordenada y con mucha atención al detalle. Busco mi primera oportunidad en el sector bancario para aplicar mi formación académica, aprender la dinámica del sistema financiero desde adentro y seguir desarrollándome profesionalmente en un entorno de mayor responsabilidad.
             </p>
 
             <h2>Experiencia Laboral</h2>
-
             <div class="job">
-
                 <div class="job-header">
-
-                    <span class="job-title">
-                        Cajero / Atención al Cliente
-                    </span>
-
-                    <span class="job-date">
-                        [Mes] 202X – Actualidad
-                    </span>
-
+                    <span class="job-title">Cajero / Atención al Cliente</span>
+                    <span class="job-date">[Mes] 202X – Actualidad</span>
                 </div>
-
-                <div class="job-company">
-                    Supermercados La Anónima
-                </div>
-
+                <div class="job-company">Supermercados La Anónima</div>
                 <ul class="job-description">
-                    <li>Atención al público en línea de cajas, asegurando una experiencia de cliente ágil y cordial.</li>
-                    <li>Manejo de altos volúmenes de efectivo, tarjetas de crédito/débito y medios de pago digitales.</li>
-                    <li>Ejecución rigurosa de arqueos, cierres de caja y resguardo de valores bajo estrictos protocolos de seguridad.</li>
-                    <li>Resolución de consultas y fidelización de clientes en un entorno dinámico y de alta exigencia.</li>
+                    <li>Atención directa al cliente en línea de cajas, priorizando un trato cordial y ágil.</li>
+                    <li>Cobro con múltiples medios de pago: efectivo, tarjetas de débito/crédito y billeteras virtuales.</li>
+                    <li>Apertura, arqueo y cierre de caja al finalizar cada turno.</li>
+                    <li>Manejo constante de grandes sumas de dinero, manteniendo siempre la precisión para evitar faltantes.</li>
                 </ul>
-
             </div>
 
             <div class="job">
-
                 <div class="job-header">
-
-                    <span class="job-title">
-                        Asistente Administrativo / Caja
-                    </span>
-
-                    <span class="job-date">
-                        Ene 2022 – Ago 2022
-                    </span>
-
+                    <span class="job-title">Asistente Administrativo y Caja</span>
+                    <span class="job-date">Ene 2022 – Ago 2022</span>
                 </div>
-
-                <div class="job-company">
-                    Farmacia Indaver
-                </div>
-
+                <div class="job-company">Farmacia Indaver</div>
                 <ul class="job-description">
-                    <li>Registro de comprobantes y asistencia en procesos de facturación.</li>
-                    <li>Mantenimiento y control de caja, logrando un récord de cero diferencias durante todo el período laboral.</li>
-                    <li>Gestión y carga de datos administrativos en el sistema interno.</li>
-                    <li>Optimización del control, auditoría básica y reposición de stock.</li>
+                    <li>Cobro a clientes y manejo de la caja diaria del local.</li>
+                    <li>Carga de facturas, remitos y comprobantes en el sistema administrativo interno.</li>
+                    <li>Control de stock de mercadería y asistencia en la reposición de productos.</li>
+                    <li>Resolución de consultas y atención al público en general.</li>
                 </ul>
-
             </div>
 
             <h2>Educación</h2>
-
             <div class="education-item">
-
                 <div class="job-header">
-
-                    <span>
-                        <strong>Licenciatura en Economía</strong>
-                    </span>
-
-                    <span class="job-date">
-                        2023 - Actualidad
-                    </span>
-
+                    <span><strong>Licenciatura en Economía</strong></span>
+                    <span class="job-date">2023 - Actualidad</span>
                 </div>
-
-                <p>
-                    Universidad Católica de Salta (UCASAL) · 2° año en curso
-                </p>
-
+                <p>Universidad Católica de Salta (UCASAL) · 2° año en curso</p>
             </div>
 
-            <h2>Competencias Transversales</h2>
-
+            <h2>Aptitudes</h2>
             <div class="competences">
-                <span class="competence-tag">Capacidad Analítica</span>
                 <span class="competence-tag">Atención al detalle</span>
-                <span class="competence-tag">Integridad y Ética</span>
-                <span class="competence-tag">Orientación al Cliente</span>
-                <span class="competence-tag">Trabajo bajo presión</span>
+                <span class="competence-tag">Responsabilidad con el dinero</span>
+                <span class="competence-tag">Trato cordial</span>
+                <span class="competence-tag">Trabajo en equipo</span>
+                <span class="competence-tag">Agilidad en tareas repetitivas</span>
             </div>
 
             <div class="highlight-box">
-
+                <p><strong>Dato destacado:</strong></p>
                 <p>
-                    <strong>Dato destacado para el Sector Financiero:</strong>
+                    A lo largo de mi experiencia laboral en puestos de caja, tanto en La Anónima como en Farmacia Indaver, he logrado mantener los arqueos y cierres sin diferencias, lo que refleja mi responsabilidad y concentración al momento de manejar valores.
                 </p>
-
-                <p>
-                    A lo largo de mi trayectoria laboral en roles de manejo de fondos (tanto en La Anónima como en Farmacia Indaver), <strong>he mantenido controles y arqueos de caja sin diferencias</strong>, demostrando un alto nivel de precisión, responsabilidad y transparencia en la custodia de valores.
-                </p>
-
             </div>
-
         </div>
-
     </div>
-
 </body>
-
 </html>

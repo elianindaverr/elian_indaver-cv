@@ -1,376 +1,315 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Administrativo - Elian Indaver</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Elian Indaver - Administrativo ATS</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <style>
+    :root {
+      --text: #24313d;
+      --muted: #66737f;
+      --accent: #3f8f86;
+      --line: #d9e1e5;
+      --paper: #ffffff;
+      --screen-bg: #eef2f5;
+    }
 
-        @page {
-            size: A4;
-            margin: 0;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #eef2f5;
-            color: #24313d;
-            line-height: 1.45;
-            padding: 24px 0;
-        }
+    @page {
+      size: A4;
+      margin: 0;
+    }
 
-        .cv {
-            width: 210mm;
-            min-height: 297mm;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 16mm 18mm 14mm;
-            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.10);
-        }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--screen-bg);
+    }
 
-        /* HEADER */
-        .header {
-            position: relative;
-            border-bottom: 2px solid #dbe5e8;
-            padding-right: 38mm;
-            padding-bottom: 14px;
-            margin-bottom: 18px;
-        }
+    body {
+      padding: 24px 0;
+    }
 
-        .header h1 {
-            font-size: 30px;
-            line-height: 1.05;
-            letter-spacing: 0.3px;
-            color: #1e2b37;
-            margin-bottom: 5px;
-        }
+    .cv {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 14mm 17mm 13mm;
+      background: var(--paper);
+      box-shadow: 0 8px 28px rgba(0,0,0,.10);
+    }
 
-        .professional-title {
-            font-size: 15px;
-            font-weight: 600;
-            color: #397d77;
-            margin-bottom: 10px;
-        }
+    header {
+      margin-bottom: 14px;
+    }
 
-        .contact {
-            font-size: 10.5px;
-            color: #4b5965;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px 14px;
-        }
+    h1 {
+      margin: 0 0 4px;
+      font-size: 26px;
+      line-height: 1.05;
+      color: #1e2b37;
+      letter-spacing: .2px;
+    }
 
-        .contact a {
-            color: inherit;
-            text-decoration: none;
-        }
+    .headline {
+      margin-bottom: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+    }
 
-        .photo {
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 29mm;
-            height: 34mm;
-            object-fit: cover;
-            object-position: center 22%;
-            border-radius: 6px;
-            border: 2px solid #65bdb1;
-            background: #f4f4f4;
-        }
+    .contact {
+      font-size: 10px;
+      line-height: 1.45;
+      color: var(--muted);
+      word-break: break-word;
+    }
 
-        /* SECTIONS */
-        section {
-            margin-top: 15px;
-        }
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        h2 {
-            color: #1e2b37;
-            font-size: 16px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-left: 4px solid #65bdb1;
-            padding-left: 8px;
-            margin-bottom: 8px;
-        }
+    .divider {
+      border: 0;
+      border-top: 1px solid var(--line);
+      margin: 12px 0 0;
+    }
 
-        .profile {
-            font-size: 11.2px;
-            color: #34424e;
-        }
+    section {
+      margin-top: 12px;
+    }
 
-        /* EXPERIENCE */
-        .job {
-            margin-bottom: 12px;
-        }
+    h2 {
+      margin: 0 0 6px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--line);
+      font-size: 12px;
+      line-height: 1.2;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      color: #1e2b37;
+    }
 
-        .job-top {
-            display: flex;
-            justify-content: space-between;
-            gap: 14px;
-            align-items: baseline;
-        }
+    p {
+      margin: 0;
+      font-size: 10.25px;
+      line-height: 1.45;
+    }
 
-        .job-title {
-            font-size: 12.2px;
-            font-weight: 700;
-            color: #202c36;
-        }
+    .profile {
+      color: #34424d;
+    }
 
-        .job-date {
-            font-size: 10.2px;
-            color: #687987;
-            white-space: nowrap;
-        }
+    .job,
+    .education-item {
+      margin-bottom: 10px;
+    }
 
-        .company {
-            font-size: 10.8px;
-            color: #397d77;
-            font-weight: 600;
-            margin: 2px 0 4px;
-        }
+    .job:last-child,
+    .education-item:last-child {
+      margin-bottom: 0;
+    }
 
-        ul {
-            padding-left: 17px;
-        }
+    .job-title,
+    .education-title {
+      margin: 0;
+      font-size: 10.8px;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #202b35;
+    }
 
-        li {
-            font-size: 10.6px;
-            margin-bottom: 3px;
-            color: #35434e;
-        }
+    .company,
+    .education-place {
+      margin-top: 1px;
+      font-size: 10px;
+      line-height: 1.3;
+      font-weight: 600;
+      color: var(--accent);
+    }
 
-        /* TWO SIMPLE INFO COLUMNS - DOM remains linear */
-        .bottom-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-top: 4px;
-        }
+    .date {
+      font-weight: 400;
+      color: var(--muted);
+    }
 
-        .education-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-            align-items: baseline;
-        }
+    ul {
+      margin: 5px 0 0;
+      padding-left: 17px;
+    }
 
-        .education-title {
-            font-size: 11.2px;
-            font-weight: 700;
-            color: #202c36;
-        }
+    li {
+      margin: 0 0 3px;
+      font-size: 10px;
+      line-height: 1.4;
+    }
 
-        .education-detail {
-            font-size: 10.4px;
-            color: #465663;
-            margin-top: 2px;
-        }
+    .skills-list,
+    .course-list {
+      margin-top: 4px;
+    }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
+    .skills-list li,
+    .course-list li {
+      margin-bottom: 3px;
+    }
 
-        .skill {
-            border: 1px solid #d7e5e7;
-            background: #f7fafb;
-            border-radius: 4px;
-            padding: 4px 7px;
-            font-size: 9.9px;
-            color: #2e3c47;
-        }
+    .language {
+      font-size: 10px;
+    }
 
-        .course-list,
-        .language {
-            font-size: 10.5px;
-            color: #35434e;
-        }
+    strong {
+      font-weight: 700;
+    }
 
-        .course-list li {
-            margin-bottom: 4px;
-        }
+    @media print {
+      html, body {
+        background: #fff;
+      }
 
-        .small-note {
-            font-size: 9.5px;
-            color: #72808b;
-            margin-top: 3px;
-        }
+      body {
+        padding: 0;
+      }
 
-        @media print {
-            body {
-                background: #ffffff;
-                padding: 0;
-            }
+      .cv {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0;
+        box-shadow: none;
+      }
 
-            .cv {
-                width: 210mm;
-                min-height: 297mm;
-                margin: 0;
-                box-shadow: none;
-            }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
 
-            a {
-                color: inherit;
-                text-decoration: none;
-            }
-        }
+    @media (max-width: 900px) {
+      body {
+        padding: 0;
+      }
 
-        @media (max-width: 850px) {
-            body {
-                padding: 0;
-            }
-
-            .cv {
-                width: 100%;
-                min-height: auto;
-                padding: 28px 24px;
-            }
-
-            .header {
-                padding-right: 0;
-            }
-
-            .photo {
-                position: static;
-                display: block;
-                margin: 12px 0 0;
-            }
-
-            .bottom-grid {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-
-            .job-top,
-            .education-row {
-                flex-direction: column;
-                gap: 2px;
-            }
-        }
-    </style>
+      .cv {
+        width: 100%;
+        min-height: auto;
+        padding: 28px 22px;
+        box-shadow: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <main class="cv">
+  <main class="cv">
 
-        <header class="header">
-            <h1>ELIAN INDAVER</h1>
-            <div class="professional-title">
-                Asistente Administrativo | Estudiante de Economía
-            </div>
+    <header>
+      <h1>ELIAN INDAVER</h1>
+      <div class="headline">Asistente Administrativo | Estudiante de Economía</div>
 
-            <div class="contact">
-                <span>Centenario, Neuquén</span>
-                <span>2995308415</span>
-                <span>elianindaver@gmail.com</span>
-                <a href="https://linkedin.com/in/elian-indaver" target="_blank">
-                    linkedin.com/in/elian-indaver
-                </a>
-            </div>
+      <div class="contact">
+        Centenario, Neuquén · 2995308415 ·
+        <a href="mailto:elianindaver@gmail.com">elianindaver@gmail.com</a> ·
+        <a href="https://linkedin.com/in/elian-indaver" target="_blank">
+          linkedin.com/in/elian-indaver
+        </a>
+      </div>
 
-            <img src="foto elian.png" alt="Foto de Elian Indaver" class="photo">
-        </header>
+      <hr class="divider">
+    </header>
 
-        <section>
-            <h2>Perfil Profesional</h2>
-            <p class="profile">
-                Estudiante de segundo año de la Licenciatura en Economía con experiencia en caja,
-                atención al cliente y tareas administrativas. Actualmente me desempeño en
-                Supermercados La Anónima, realizando operaciones de caja, arqueos, control de valores
-                y atención al público. Cuento con manejo intermedio de Excel y formación complementaria
-                en administración y contabilidad. Busco desarrollarme en posiciones administrativas,
-                contables o financieras.
-            </p>
-        </section>
+    <section>
+      <h2>Perfil Profesional</h2>
+      <p class="profile">
+        Estudiante de segundo año de la Licenciatura en Economía con experiencia en caja,
+        atención al cliente y tareas administrativas. Actualmente me desempeño en
+        Supermercados La Anónima, realizando operaciones de caja, arqueos, control de valores
+        y atención al público. Cuento con manejo intermedio de Excel y formación complementaria
+        en administración y contabilidad. Busco desarrollarme en posiciones administrativas,
+        contables o financieras.
+      </p>
+    </section>
 
-        <section>
-            <h2>Experiencia Laboral</h2>
+    <section>
+      <h2>Experiencia Laboral</h2>
 
-            <article class="job">
-                <div class="job-top">
-                    <div class="job-title">Cajero / Operador de Cajas</div>
-                    <div class="job-date">Julio 2026 – Actualidad</div>
-                </div>
-                <div class="company">Supermercados La Anónima</div>
-                <ul>
-                    <li>Manejo de efectivo, tarjetas y distintos medios de pago.</li>
-                    <li>Apertura, cierre, arqueo de caja y control de valores.</li>
-                    <li>Conciliación y verificación de operaciones al cierre de turno.</li>
-                    <li>Atención al cliente y resolución de consultas en el punto de venta.</li>
-                    <li>Registro y control de operaciones conforme a procedimientos internos.</li>
-                </ul>
-            </article>
+      <div class="job">
+        <p class="job-title">
+          Cajero / Operador de Cajas —
+          <span class="date">Julio 2026 – Actualidad</span>
+        </p>
+        <p class="company">Supermercados La Anónima</p>
+        <ul>
+          <li>Manejo de efectivo, tarjetas y distintos medios de pago.</li>
+          <li>Apertura, cierre, arqueo de caja y control de valores.</li>
+          <li>Conciliación y verificación de operaciones al cierre de turno.</li>
+          <li>Atención al cliente y resolución de consultas en el punto de venta.</li>
+          <li>Registro y control de operaciones de acuerdo con procedimientos internos.</li>
+        </ul>
+      </div>
 
-            <article class="job">
-                <div class="job-top">
-                    <div class="job-title">Asistente Administrativo y Caja</div>
-                    <div class="job-date">Enero 2022 – Agosto 2022</div>
-                </div>
-                <div class="company">Farmacia Indaver</div>
-                <ul>
-                    <li>Manejo de caja y control de transacciones comerciales diarias.</li>
-                    <li>Registro y organización de documentación contable en sistemas de gestión.</li>
-                    <li>Control de stock, inventarios e insumos comerciales.</li>
-                    <li>Atención y asesoramiento a clientes en salón de ventas.</li>
-                    <li>Apoyo en tareas administrativas y organización de información operativa.</li>
-                </ul>
-            </article>
-        </section>
+      <div class="job">
+        <p class="job-title">
+          Asistente Administrativo y Caja —
+          <span class="date">Enero 2022 – Agosto 2022</span>
+        </p>
+        <p class="company">Farmacia Indaver</p>
+        <ul>
+          <li>Manejo de caja y control de transacciones comerciales diarias.</li>
+          <li>Registro y organización de documentación contable en sistemas de gestión.</li>
+          <li>Control de stock, inventarios e insumos comerciales.</li>
+          <li>Atención y asesoramiento a clientes en salón de ventas.</li>
+          <li>Apoyo en tareas administrativas y organización de información operativa.</li>
+        </ul>
+      </div>
+    </section>
 
-        <div class="bottom-grid">
+    <section>
+      <h2>Educación</h2>
+      <div class="education-item">
+        <p class="education-title">
+          Licenciatura en Economía —
+          <span class="date">2023 – Actualidad</span>
+        </p>
+        <p class="education-place">
+          Universidad Católica de Salta (UCASAL) · 2° año en curso
+        </p>
+      </div>
+    </section>
 
-            <div>
-                <section>
-                    <h2>Educación</h2>
-                    <div class="education-row">
-                        <div class="education-title">Licenciatura en Economía</div>
-                        <div class="job-date">2023 – Actualidad</div>
-                    </div>
-                    <div class="education-detail">
-                        Universidad Católica de Salta (UCASAL) · 2° año en curso
-                    </div>
-                </section>
+    <section>
+      <h2>Conocimientos y Habilidades</h2>
+      <ul class="skills-list">
+        <li>Excel nivel intermedio.</li>
+        <li>Caja, arqueos y control de valores.</li>
+        <li>Conciliación y verificación de operaciones.</li>
+        <li>Registro y organización de documentación administrativa y contable.</li>
+        <li>Control de stock e inventarios.</li>
+        <li>Atención al cliente y resolución de consultas.</li>
+        <li>Uso de sistemas de gestión y herramientas digitales.</li>
+      </ul>
+    </section>
 
-                <section>
-                    <h2>Formación Complementaria</h2>
-                    <ul class="course-list">
-                        <li>Excel Intermedio – Santander</li>
-                        <li>Auxiliar Contable</li>
-                        <li>Uso de herramientas de Inteligencia Artificial</li>
-                    </ul>
-                </section>
-            </div>
+    <section>
+      <h2>Formación Complementaria</h2>
+      <ul class="course-list">
+        <li>Excel Intermedio – Santander.</li>
+        <li>Auxiliar Contable.</li>
+        <li>Uso de herramientas de Inteligencia Artificial.</li>
+      </ul>
+    </section>
 
-            <div>
-                <section>
-                    <h2>Conocimientos y Habilidades</h2>
-                    <div class="skills">
-                        <span class="skill">Excel intermedio</span>
-                        <span class="skill">Caja y arqueos</span>
-                        <span class="skill">Conciliación de valores</span>
-                        <span class="skill">Atención al cliente</span>
-                        <span class="skill">Documentación contable</span>
-                        <span class="skill">Control de stock</span>
-                        <span class="skill">Sistemas de gestión</span>
-                        <span class="skill">Control de operaciones</span>
-                    </div>
-                </section>
+    <section>
+      <h2>Idiomas</h2>
+      <p class="language"><strong>Inglés:</strong> Intermedio (B2).</p>
+    </section>
 
-                <section>
-                    <h2>Idiomas</h2>
-                    <p class="language"><strong>Inglés:</strong> Intermedio (B2)</p>
-                </section>
-            </div>
-
-        </div>
-
-    </main>
+  </main>
 </body>
 </html>
